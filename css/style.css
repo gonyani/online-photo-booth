@@ -3,47 +3,41 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* 스크롤 제거 */
+  overflow: hidden; /* 화면 고정 */
   font-family: 'Arial', sans-serif;
   background-color: #FFD2AC;
-  text-align: center;
   position: relative;
 }
 
-/* 도트 패턴용 div */
-.dot-pattern {
+canvas {
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background-image: radial-gradient(#F9C08F 15%, transparent 15%);
-  background-size: 20px 20px;
-  transform: rotate(45deg);
-  z-index: -1;
+  top: 0;
+  left: 0;
+  z-index: 0; /* 패턴 뒤에 표시 */
 }
 
-/* 홈 화면 컨테이너 */
 .home-container {
-  position: relative; /* 패턴과 겹치지 않도록 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
-  height: 100%;
+  justify-content: flex-start; /* 로고 위쪽 배치 */
   padding-top: 80px;
+  gap: 40px;
+  z-index: 1; /* 캔버스보다 위 */
   box-sizing: border-box;
 }
 
-/* 로고 크기 */
 .logo-image {
   width: 260px;
   max-width: 90%;
   height: auto;
 }
 
-/* 업로드 버튼 */
 .upload-btn {
   width: 160px;
   max-width: 75%;
@@ -51,7 +45,6 @@ html, body {
   cursor: pointer;
 }
 
-/* 파일 입력 숨김 */
 .hidden-input {
   display: none !important;
 }
