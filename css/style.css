@@ -3,7 +3,11 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Arial', sans-serif;
-  background-color: #ffebff; /* 연한 핑크 배경 예시 */
+
+  /* 배경색 + 땡땡이 패턴 */
+  background-color: #FFD2AC;
+  background-image: radial-gradient(#F9C08F 10%, transparent 10%);
+  background-size: 30px 30px; /* 패턴 간격 */
 }
 
 .home-container {
@@ -16,7 +20,7 @@ body {
 }
 
 .logo-image {
-  width: 240px; /* 표시 크기 */
+  width: 240px; /* 화면에 표시되는 크기 */
   margin-bottom: 50px;
 }
 
