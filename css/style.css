@@ -3,11 +3,22 @@ body {
   padding: 0;
   text-align: center;
   font-family: 'Arial', sans-serif;
-
-  /* 배경색 + 땡땡이 패턴 */
   background-color: #FFD2AC;
-  background-image: radial-gradient(#F9C08F 10%, transparent 10%);
-  background-size: 30px 30px; /* 패턴 간격 */
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 도트 패턴만 회전 */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#F9C08F 15%, transparent 15%);
+  background-size: 20px 20px; /* 간격 좁게 */
+  transform: rotate(45deg);   /* 45도 회전 */
+  z-index: -1;                /* 내용 뒤로 */
 }
 
 .home-container {
