@@ -31,26 +31,26 @@ body::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px; /* 로고와 버튼 간격 */
+  gap: 40px; /* 로고와 버튼 간격 약간 넓힘 */
   padding: 20px;
 }
 
-/* 로고 크기 최적화 */
+/* 로고 크기 조정 */
 .logo-image {
-  width: 180px;   /* 화면 폭에 맞게 조정 */
-  max-width: 80%;
+  width: 220px;   /* 이전 180px → 220px */
+  max-width: 85%;
   height: auto;
 }
 
-/* 업로드 버튼 크기 최적화 */
+/* 업로드 버튼 크기 조정 */
 .upload-btn {
-  width: 140px;
-  max-width: 70%;
+  width: 160px;   /* 이전 140px → 160px */
+  max-width: 75%;
   height: auto;
   cursor: pointer;
 }
 
 /* 실제 파일 입력 숨기기 */
 .hidden-input {
-  display: none !important; /* 확실하게 숨김 */
+  display: none !important;
 }
