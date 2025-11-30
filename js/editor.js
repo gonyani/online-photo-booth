@@ -1,20 +1,40 @@
-window.onload = () => {
-    const dataUrl = localStorage.getItem("uploadedImage");
+// Canvas 도트 패턴 재사용
+const canvas = document.getElementById('dotCanvas');
+const ctx = canvas.getContext('2d');
 
-    if (!dataUrl) {
-        alert("업로드된 이미지가 없습니다. 처음으로 돌아갑니다.");
-        window.location.href = "index.html";
-        return;
+function drawDots() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const spacing = 20;
+  const radius = 3;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle = '#F9C08F';
+  ctx.save();
+  ctx.translate(canvas.width/2, canvas.height/2);
+  ctx.rotate(Math.PI/4);
+  ctx.translate(-canvas.width/2, -canvas.height/2);
+
+  for(let x = -canvas.width; x < canvas.width*2; x+=spacing){
+    for(let y = -canvas.height; y < canvas.height*2; y+=spacing){
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI*2);
+      ctx.fill();
     }
+  }
+  ctx.restore();
+}
 
-    document.getElementById("previewImage").src = dataUrl;
-};
+drawDots();
+window.addEventListener('resize', drawDots);
 
-document.getElementById("finishBtn").addEventListener("click", () => {
-    // 현재는 원본 그대로 result.html로 넘김
-    const dataUrl = document.getElementById("previewImage").src;
+// 업로드한 이미지 불러오기
+const uploadedImage = document.getElementById('uploadedImage');
+const imgData = localStorage.getItem('uploadedImage');
+if(imgData){
+  uploadedImage.src = imgData;
+}
 
-    localStorage.setItem("finalImage", dataUrl);
-    window.location.href = "result.html";
+// 완료 버튼 클릭
+document.querySelector('.complete-btn').addEventListener('click', ()=>{
+  window.location.href = "result.html";
 });
-
