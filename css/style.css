@@ -11,7 +11,7 @@ html, body {
   text-align: center;
 }
 
-/* 회전된 도트 패턴 */
+/* 회전된 도트 패턴 - 항상 화면 뒤에 표시 */
 body::before {
   content: "";
   position: fixed;
@@ -22,15 +22,16 @@ body::before {
   background-image: radial-gradient(#F9C08F 15%, transparent 15%);
   background-size: 20px 20px;
   transform: rotate(45deg);
-  z-index: -1;
+  z-index: -1; /* 항상 내용 뒤 */
 }
 
 /* 홈 화면 컨테이너 */
 .home-container {
+  position: relative; /* 가상요소와 겹치지 않도록 */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* 로고를 위쪽으로 이동 */
+  justify-content: flex-start; /* 로고 위쪽 배치 */
   gap: 40px; /* 로고-버튼 간격 */
   height: 100%;
   padding-top: 80px; /* 상단 여백 */
@@ -39,7 +40,7 @@ body::before {
 
 /* 로고 크기 및 위치 */
 .logo-image {
-  width: 260px;   /* 이전 220px → 260px */
+  width: 260px;   /* 로고 크기 */
   max-width: 90%;
   height: auto;
 }
