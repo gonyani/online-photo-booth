@@ -1,35 +1,31 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffebff; /* 연한 핑크 배경 예시 */
 }
 
-.container, .editor-container, .result-container {
-    max-width: 600px;
-    margin: 0 auto;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
 }
 
-.title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.logo-image {
+  width: 240px; /* 표시 크기 */
+  margin-bottom: 50px;
 }
 
-.image-preview-area img {
-    width: 100%;
-    max-width: 400px;
-    border: 2px solid #ccc;
-    margin-top: 20px;
+.upload-btn {
+  width: 180px;
+  cursor: pointer;
 }
 
-.decor-tools {
-    margin-top: 30px;
-    padding: 20px;
-    background: #f4f4f4;
+/* 실제 파일 입력 숨기기 */
+.hidden-input {
+  display: none;
 }
-
-.finish-button {
-    margin-top: 30px;
-    padding: 10px 20px;
-}
-
