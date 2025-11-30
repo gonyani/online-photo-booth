@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Y2K 스티커 사진기</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y2K 스티커 사진기</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Y2K 스티커 사진기</h1>
+  <div class="home-container">
 
-        <!-- 이미지 업로드 -->
-        <input type="file" id="imageInput" accept="image/*" />
+    <!-- 타이틀 / 로고 -->
+    <img src="assets/logo.png" alt="Y2K 스티커 사진기" class="logo-image" />
 
-        <!-- 다음 페이지로 이동 -->
-        <button id="goEditorBtn">사진 꾸미기 시작하기</button>
-    </div>
+    <!-- 이미지 업로드 버튼 -->
+    <input type="file" id="imageInput" accept="image/*" class="hidden-input" />
+    <img src="assets/upload-btn.png" alt="사진 업로드" class="upload-btn" id="uploadBtn" />
 
-    <script src="js/main.js"></script>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
-
