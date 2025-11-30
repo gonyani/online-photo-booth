@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>사진 편집하기</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사진 편집</title>
+  <link rel="stylesheet" href="css/editor.css">
 </head>
 <body>
-    <div class="editor-container">
+  <!-- 배경 도트 -->
+  <canvas id="dotCanvas"></canvas>
 
-        <!-- 상단: 업로드된 이미지 표시 -->
-        <div class="image-preview-area">
-            <img id="previewImage" src="" alt="업로드한 이미지" />
-        </div>
-
-        <!-- 하단: 꾸미기 버튼들 자리 -->
-        <div class="decor-tools">
-            <p>여기에 스티커 / 텍스트 / 배경 등의 꾸미기 UI가 들어갈 예정</p>
-        </div>
-
-        <!-- 완료 버튼 -->
-        <button id="finishBtn" class="finish-button">완성하기</button>
+  <div class="editor-container">
+    <!-- 상단 이미지 프레임 -->
+    <div class="photo-frame">
+      <img id="uploadedImage" src="" alt="업로드 이미지">
     </div>
 
-    <script src="js/editor.js"></script>
+    <!-- 하단 꾸미기 메뉴 -->
+    <div class="menu-bar">
+      <button class="menu-btn">스티커</button>
+      <button class="menu-btn">텍스트</button>
+      <button class="menu-btn">배경</button>
+      <!-- 나중에 아이템 추가 -->
+    </div>
+
+    <!-- 우측 상단 완료 버튼 -->
+    <button class="complete-btn">완성</button>
+  </div>
+
+  <script src="js/editor.js"></script>
 </body>
 </html>
-
