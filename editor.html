@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>사진 편집</title>
-  <link rel="stylesheet" href="css/editor.css">
+  <link rel="stylesheet" href="css/editor.css" />
 </head>
 <body>
   <!-- 배경 도트 -->
@@ -12,20 +12,26 @@
 
   <div class="editor-container">
     <!-- 상단 이미지 프레임 -->
-    <div class="photo-frame">
+    <div class="photo-frame" id="photoFrame">
       <img id="uploadedImage" src="" alt="업로드 이미지">
     </div>
 
     <!-- 하단 꾸미기 메뉴 -->
     <div class="menu-bar">
-      <button class="menu-btn">스티커</button>
-      <button class="menu-btn">텍스트</button>
-      <button class="menu-btn">배경</button>
-      <!-- 나중에 아이템 추가 -->
+      <button class="menu-btn" id="stickerBtn">스티커</button>
+      <button class="menu-btn" id="textBtn">텍스트</button>
+      <button class="menu-btn" id="bgBtn">배경</button>
     </div>
 
     <!-- 우측 상단 완료 버튼 -->
-    <button class="complete-btn">완성</button>
+    <button class="complete-btn" id="completeBtn">완성</button>
+  </div>
+
+  <!-- 스티커 선택 샘플 (숨김) -->
+  <div id="stickerPanel" class="sticker-panel">
+    <img src="assets/sticker1.png" class="sticker-item">
+    <img src="assets/sticker2.png" class="sticker-item">
+    <img src="assets/sticker3.png" class="sticker-item">
   </div>
 
   <script src="js/editor.js"></script>
